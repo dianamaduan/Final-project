@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+	<main class="itemsmain">
+		<div class="item">
+			<img src="../static/img/img1.png" />
+			<div class="column">
+				<p class="ksh">Men's Analog Quartz Watch</p>
+				<p class="gender">men</p>
+				<span class="instock">In Stock</span>
+			</div>
+			<div class="column">
+				<p class="ksh">Ksh 500</p>
+				<select>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+				<p class="ksh">Total Ksh 500</p>
+			</div>
+			<div class="column">
+			    <button class="remove">Remove</button>
+		    </div>
+		</div>
+		<hr>
+		<div class="item">
+			<img src="../static/img/img2.png">
+			<div class="column">
+				<p class="ksh">Singedani Four Set Handbag</p>
+				<p class="gender">men</p>
+				<span class="instock">In Stock</span>
+			</div>
+			<div class="column">
+				<p class="ksh">Ksh 1160</p>
+				<select>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+				<p class="ksh">Total Ksh 1160</p>
+			</div>
+			<div class="column">
+			    <button class="remove">Remove</button>
+		    </div>
+		</div>
+		<hr class="hr">
+		<div class="row">
+			<p class="ksh" style="font-weight: 400;margin-left: 440px">Subtotal</p>
+			<p class="ksh" style="font-weight: 400;">ksh 1160</p>
+		</div>
+		<hr class="hr">
+		<div class="row">
+			<p class="ksh" style="font-weight: 400;margin-left: 440px">VAT</p>
+			<p class="ksh" style="font-weight: 400;">ksh 266</p>
+		</div>
+		<hr class="hr">
+		<div class="row">
+			<p class="ksh" style="font-weight: 600;margin-left: 440px;font-size: 20px">Total</p>
+			<p class="ksh" style="font-weight: 600;font-size: 20px">Ksh 1926</p>
+		</div>
+		<hr>
+	    <div style="display: flex;  justify-content:flex-end">
+	    	<a href="/nocards"><button class="clear-btn">Clear Card</button></a>
+	    	<a href="/home"><button class="clear-btn">Continue Shopping</button></a>
+	    	<a href="/checkout"><button class="checkout-btn">Checkout</button></a>
+	    </div>
+	</main>
+{% endblock %}

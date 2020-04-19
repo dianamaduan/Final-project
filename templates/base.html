@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React-shop</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="static/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/style/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+</head>
+<body>
+<header style="background-color: white;margin: 0;">
+    <div class="header_nav">
+        <div><p id="icontext">DUKA</p></div>
+        <div>
+            <a href = "{% url 'home' %}" class="nava link-active">Home</a>
+            {% for cat in categories %}
+            <a href="{% url 'category' cat.id %}" class="nava">{{cat.name}}</a>
+            {% endfor %}
+            {% if request.user.is_staff %}
+            <a href="{% url 'new_product' %}" class="nava">Add product</a>
+            {% endif %}
+            <a href="{% url 'cards' %}" class="nava">Cart<span>0</span></a>
+            {% if not user.is_authenticated %}
+            <a href = "{% url 'signup' %}" class="nava">Sign Up</a>
+            <a href = "{% url 'login' %}" class="nava">Log in </a>
+            {% endif %}
+            {% if user.is_authenticated %}
+            <a href = "{% url 'logout' %}" class="nava">Log Out </a>
+            <a href = "{% url 'profile' %}" class="nava">Profile</a>
+            <a href = "{% url 'logout' %}" class="nava" style="color:crimson;font-weight: 500;">{{user.first_name }}  {{user.last_name}}</a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+    
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    
+<footer>
+    <p>made with Love by <b>Collins nixon.</b>This project is open source, visit <b>the repo</b></p>
+</footer>
+  
+</body>
+</html>

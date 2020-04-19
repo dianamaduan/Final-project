@@ -1,0 +1,90 @@
+
+/*CARDS*/
+.cards-block{
+	margin-left: 20px;
+	margin-top: 10px;
+	display: flex;
+    flex-wrap: wrap; 
+}
+.card{
+	display: flex;
+    flex-direction: column;
+	width:254px;
+	background-color: #fff;
+	padding-bottom: 15px;
+	margin:15px;
+}
+
+.card-img{
+	height:55%; 
+	width:70%;
+	margin-left: 30px;
+}
+.sale{
+	color: white;
+	background-color: #e40046;
+	border:none;
+	font-size: 12px;
+	padding: 4px 9px;
+}
+.spanp{
+	color: white;
+	background-color: #555555;
+	border:none;
+	font-size: 12px;
+	padding: 4px 9px;
+}
+.desc{
+	text-align: center;
+	color: black;
+	font-size: 14px;
+	font-family: -apple-system "Segoe UI";
+	margin: 0 0 10px;
+	letter-spacing: .5px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.cost{
+	text-align: center;
+	font-size: 14px;
+	font-family: -apple-system "Segoe UI";
+	margin: 0 0 10px;
+	letter-spacing: .5px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.cost2{
+	color: #999;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: line-through;
+    margin-left: 3px;
+}
+.row{
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.row2{
+	display: flex;
+	margin: 0;
+	justify-content: center;
+}
+.row3{
+	display: flex;
+	margin: 0;
+}
+.addbtn{
+	
+	color: #FFF;
+    font-size: 13px;
+    background-color: #F17E0A;
+    font-weight: 600;
+    border-color: #F17E0A;
+    line-height: 1.5;
+    border-radius: .2rem;
+    padding: 4px 8px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

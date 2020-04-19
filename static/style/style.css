@@ -1,0 +1,464 @@
+@import url('reset.css');
+@import url('header.css');
+@import url('successpage.css');
+@import url('cards.css');
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 
+	"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+	 "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	background-color: #E6EEFB; 
+	padding: 0;
+}
+.row form input{
+	width: 480px;
+	border-radius: 5px;
+}
+.comments-item{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	background-color:antiquewhite;
+	border-radius: 5px;
+	padding:10px;
+}
+.nava:hover{
+	color: #E40046;
+	cursor: pointer;
+}
+.comments{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: auto;
+	width:640px;
+	height: auto;
+	margin-top: 40px;
+	background-color:#fff;
+	padding:20px;
+}
+.card-details{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    width:300px;
+    height: auto;
+	background-color: #fff;
+	padding-bottom: 25px;
+	margin:25px;
+}
+label {
+	text-align: justify;
+	font-size: 14px;
+	font-family: -apple-system "Segoe UI";
+	margin:  0 0 16px;
+	line-height: 22px;
+	color:#213539;
+}
+/* MAIN PART*/
+main{
+	margin-top: 10px;
+	height: auto;
+	display: flex;
+
+}
+.discount-block{
+	display: flex;
+	position: static;
+	flex-direction: column;
+	margin-left: 150px;
+	width: 250px;
+	background-color: #fff;
+	padding: 1px 15px;
+	height: 490px;
+	margin-top: 25px;
+	box-shadow: 2px 2px 2px -2px grey;
+}
+.greatd{
+	color: #F17E0A;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 14px 0;
+	font-family: -apple-system "Segoe UI";
+}
+.uset{
+	text-align: justify;
+	font-size: 14.72px;
+	font-family: -apple-system "Segoe UI";
+	margin:  0 0 16px;
+	line-height: 22px;
+	color:#213539;
+}
+p span{
+	color: white;
+	background-color: #e40046;
+	border-radius: 9px;
+	margin-left: 95px;
+	padding: 1px 5px;
+	font-size: 13px;
+}
+.percent{
+	color: #e40046;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: -apple-system "Segoe UI";
+	margin-left: 10px;
+}
+
+hr{
+	margin: 16px 0;
+	border: 0.5px solid rgba(0,0,0,0.2);
+}
+.hr{
+	margin: 6px 0;
+	border: 0.5px solid rgba(0,0,0,0.2);
+}
+select{
+	display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+footer{
+	background: #1E1E1E;
+    color: #FFF;
+    font-family: -apple-system "Segoe UI";
+    padding: 18px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+.nocards{
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	background-color: #fff;
+	padding: 24px;
+	margin-top:30px;
+	width: 1000px;
+}
+.nocards p{
+	margin-bottom: .5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: -apple-system "Segoe UI";
+    font-size: 20px;
+    text-align: left;
+}
+.nocards h3{
+	margin-bottom: .5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: -apple-system "Segoe UI";
+    font-size: 20px;
+    text-align: left;
+    color:#F17E0A;
+}
+/*ADD FORM*/
+.addform{
+	display: flex;
+	justify-content: center;
+	margin:auto;
+	margin-top: 15px;
+	
+}
+.fieldWrapper{
+	margin: 10px;
+}
+.addform form{
+	display: flex;
+	flex-direction: column;
+	background-color: skyblue;
+	padding: 20px;
+}
+/*ITEMS MAIN */
+.itemsmain{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    background-color: white;
+    padding: 15px;
+    width: 1050px;
+    height: auto;
+	margin-top: 20px;
+	margin-left: 200px;
+}
+.item{
+	display: flex;
+}
+.item img{
+	width: 100px;
+	height: auto;
+}
+.column{
+	display: flex;
+	flex-direction: column;
+	margin: 0 70px;
+}
+.remove{
+	background-color: white;
+    border-color: #E40046;
+    color: #E40046;
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    margin-right: -500px;
+    width: 70px;
+}
+.instock{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    border-radius: .25rem;
+    color: #FFF;
+    background-color: #F17E0A;
+    width: 60px;
+    padding: 4px;
+}
+.gender{
+	font-size: 16px;
+	color:#6e6e6e;
+	font-family: -apple-system "Segoe UI";
+	padding: 0 6px;
+	line-height: 30px;
+	text-align: left;
+}
+
+.ksh{
+	text-align: left;
+	font-size: 15px;
+	font-family: -apple-system "Segoe UI";
+	letter-spacing: .5px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.clear-btn{
+    border-color: #6c757d;
+    color: #6c757d;
+    margin-right: 1rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+.checkout-btn{
+	border:none;
+    color: white;
+    margin-right: 1rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    background-color: #fd7e14;
+}
+
+
+/*CHECKOUT*/
+.input-form{
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px -2px grey;
+    font-size: .95rem;
+    margin:10px 50px 10px 150px;
+    width: 730px;
+    padding-top: 20px;
+}
+.row4{
+	display: flex;
+	margin:10px;
+}
+.row4 p{
+	margin: 0 10px;
+}
+.nameinput{
+	margin: 0 10px;
+	display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+#h2{
+	font-weight: 400;
+	font-size: 24px;
+	margin: 0 0 16px;
+}
+.text{
+	display: flex;
+	margin:40px 0 0 150px;
+}
+#email{
+	margin: 20px 20px;
+}
+#h2form{
+	font-weight: 500;
+	font-size: 22px;
+	margin: 16px;
+}
+.emailinput{
+	margin: 0 20px;
+	display: block;
+    width: 91%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+.row5{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin:10px;
+	box-shadow: 2px 2px 2px -2px grey;
+	border-radius: 3px;
+	width: 70%;
+	height: 46px;
+}
+.column div{
+	margin: 7px 0;
+}
+
+.confbtn{
+	color: #FFF;
+    font-size: 16px;
+    background-color: #F17E0A;
+    font-weight: 500;
+    border-color: #F17E0A;
+    line-height: 1.5;
+    border-radius: .3rem;
+    padding: 5px 10px;
+    text-align: center;
+    width: 94%;
+    height: 42px;
+    margin: 10px 20px;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+ 
+#input-icons {
+    display: flex;
+}
+#iconinput{
+	width: 40px;
+	height: auto;
+    position: absolute;
+    margin: 18px 0 0 30px;
+}  
+#qwe4{
+	position: static;
+	padding: 0 0 0 50px;
+	height: 50px;
+}
+#mmyy{
+	font-size: 14px;
+	font-weight: 400;
+	font-family: -apple-system "Segoe UI";
+	color: gray;
+	position: absolute;
+	margin: 28px 0 0 600px;
+}
+
+#payment{
+	display: none;
+	margin:30px;
+}
+#payment p {
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1.2;
+}
+/*ORDER REVIEW BLOCK*/
+.order-block{
+	background-color: #fff;
+	box-shadow: 2px 2px 2px -2px grey;
+	border-radius: 2px;
+	margin-top: 10px;
+	height: 370px;
+	margin-left: -15px;
+}
+.order-item{
+	display: flex;
+	width: 325px;
+    padding: 10px;
+    height: auto;
+}
+.order-item img{
+	width: 60px;
+	height: 70px;
+}
+.ksho{
+	color: #F17E0A;
+	font-size: 14px;
+	font-weight: 500px;
+	margin: 10px 0 0 0;
+}
+.desc1{
+	font-size: 15px;
+	font-weight: 500px;
+	line-height: 17px;
+	text-transform: lowercase;
+}
+#hr1{
+	margin: 0;
+}
+.row0{
+	display: flex;
+	margin:0 20px 0 20px;
+	padding: 0;
+	justify-content: space-between;
+}
+.text span{
+	border-radius: 17px;
+	color: #fff;
+	background-color: #F17E0A;
+	padding: 5px 12px;
+	font-weight: 600;
+	font-size: 17px;
+	margin-left: 150px;
+	height: 20px;
+}
+.redeem-block{
+	margin-top: 33px;
+	background-color: #fff;
+	box-shadow: 2px 2px 2px -2px grey;
+	border-radius: 4px;
+	align-items: center;
+	padding: 8px 0;
+}
+#promo-input{
+	width: 70%;
+	position: relative;
+}
+#redeem{
+	position: absolute;
+	width: 100px;
+	border-radius: 3px;
+	margin-top: -38px;
+	height: 38px;\margin-left: 238px;
+}

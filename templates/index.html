@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <div class="discount-block">
+        <p class='greatd'>Great Discounts!</p>
+        <p class="uset">Use the following promo codes to get amazing discounts</p>
+        <hr>
+        <p class="percent">TENPERCENT<span>10%</span></p>
+        <hr>
+        <p class="percent">FIVEPERCENT<span>5%</span></p>
+        <hr>
+        <p class='greatd'>Convert Currency</p>
+        <select>
+            <option>KES</option>
+            <option>USD</option>
+            <option>GBP</option>
+            <option>EUR</option>
+            <option>TZX</option>
+            <option>UGX</option>
+            <option>NGN</option>
+            <option>INR</option>
+        </select>
+        <hr>
+        <p class='greatd'>Contact Us</p>
+        <p class="uset">For enquiries, reach us through,<br>(+254)-000-000-000</p>
+    </div>
+    <div class="cards-block">
+     {% for product in product_list %}
+     <div class="card" style="height:340px; padding-bottom: 10px; ">
+        <div class="row">
+            <span class="sale">SALE</span>
+            <span class="spanp">{{product.discountPercent}}%</span>
+        </div>
+        {% if product.image %}
+        <img src="{{product.image.url}}" class="card-img">
+        {% endif %}
+        <a class="desc" href="{% url 'product_detail' product.id %}" style="color: black;">{{product.title}}</a>
+        <div class="row2">
+            <p class="cost"><a href="{% url 'product_detail' product.id %}" style="color: black;font-weight: 400;">{{product.price}}</a></p>
+            <p class="cost2">{{product.discountprice}}</p>
+        </div>
+        <button class="addbtn" style="width: 140px;margin-left: 60px;">Add To Card</button>
+        <div class="row" style="margin-bottom:10px;">
+            {% if request.user.is_staff %}
+            <a href="/editproduct/{{product.id}}"><button class="addbtn" style="width: 110px;background-color: white;color: #F17E0A;">Edit</button></a>
+            <a href="/deleteproduct/{{product.id}}"><button class="addbtn" style="width: 110px;background-color: white;color: #F17E0A;">Delete</button></a>
+            {% endif %}
+        </div>
+        
+     </div>
+
+     {% endfor %}
+    </div>
+</main>
+    
+
+{% endblock %}

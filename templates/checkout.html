@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text">
+	<h2 id="h2">Billing Information</h2>
+	<h2 id="h2" style="margin-left: 600px;color: gray">Order Review</h2>
+	<span>2</span>
+</div>
+<main>
+<div class="input-form">
+	<form>
+		<div class="row4">
+			<p id="name">First Name</p>
+		    <p id="name" style="margin-left: 270px;">Last Name</p>
+		</div>
+		<div class="row4">
+		    <input type="text" name="lname" class="nameinput" placeholder="First Name">
+		    <input type="text" name="fname" class="nameinput" placeholder="Last Name">
+		</div>
+		<p id="email">Email</p>
+		<input type="email" name="email" class="emailinput" placeholder="your@example.com">
+		<h2 id="h2form">Delivery Options</h2>
+		<div class="row5">
+			<div>
+				<input type="radio" name="options" class="radiobtn" id="option1" checked="">
+		        <label for="option1" style="margin-left: 0;">Standard</label>
+			</div>
+			<p>24 - 72 Hours</p>
+			<p>ksh 300</p>
+		</div>
+        <div class="row5">
+        	<div>
+        		<input type="radio" name="options" class="radiobtn" id="qwe1">
+			    <label for="qwe1">Fastest</label> 
+        	</div>
+			<p>1 - 24 Hours</p>
+			<p>ksh 1000</p>
+		</div>
+		<h2 id="h2form">Payment Method</h2>
+		<div class="column" style="margin-left: 60px;">
+			<div>
+				<input type="radio" name="pmethod" class="radiobtn" id="qwe2" checked="" onclick="show1();">
+                <label for="qwe2">Credit Card</label> 
+			</div>
+			<div> 
+				<input type="radio" name="pmethod" class="radiobtn" id="qwe3" onclick="show2();">
+                <label for="qwe3">Pay on Delivery</label>	
+			</div> 
+		</div>
+		 <div id="input-icons"> 
+		   <img src="static/img/icon.png" id="iconinput">
+           <input type="text" name="creditcard" class="emailinput" id="qwe4" placeholder="Card number" style="margin:10px 20px;">
+           <span id="mmyy">MM / YY  CVC</span>
+        </div>
+        <div id="payment">
+        	<p>You will pay when the product is delivered to you.</p>
+        </div>
+		<hr style="width: 95%;margin-left: 20px;">
+	</form>
+	<a href="/showsuccess"><button class="confbtn">Confirm Order</button></a>
+</div>
+<div class="order-block">
+	<div class="order-item">
+		<img src="static/img/img1.png">
+			<div class="column" style="margin-left: 10px;width: 100%">
+				<p class="desc1">Men's Analog Quartz Watch</p>
+				<p class="ksho">ksh 500</p>
+				<p class="gender" style="font-size: 12px;">Qty:1</p>
+			</div>
+	</div>
+	<hr id="hr1">
+	<div class="order-item">
+		<img src="static/img/img2.png">
+			<div class="column" style="margin-left: 10px;width: 100%">
+				<p class="desc1">singedani four set handbag</p>
+				<p class="ksho">ksh 1160</p>
+				<p class="gender" style="font-size: 12px;">Qty:1</p>
+			</div>
+	</div>
+	<hr id="hr1">
+	<div class="row0">
+			<p class="ksh" style="font-weight: 300;">Subtotal</p>
+			<p class="ksh" style="font-weight: 500;">ksh 1160</p>
+		</div>
+		<div class="row0">
+			<p class="ksh" style="font-weight: 300;">VAT</p>
+			<p class="ksh" style="font-weight: 500;">ksh 266</p>
+		</div>
+		<div class="row0">
+			<p class="ksh" style="font-weight: 300;">Shipping amount</p>
+			<p class="ksh" style="font-weight: 500;">ksh 300</p>
+		</div>
+		<hr>
+		<div class="row0">
+			<p class="ksh" style="font-weight: 600;font-size: 20px">Total</p>
+			<p class="ksh" style="font-weight: 600;font-size: 20px;color:#F17E0A">Ksh 2226</p>
+		</div>
+		<div class="redeem-block">
+	        <input type="text" name="promo" placeholder="Promo Code" class="nameinput" id="promo-input">
+	        <button class="confbtn" id="redeem">Redeem</button>
+        </div>
+</div>
+</main>
+{% endblock %}
+
+<script type="text/javascript">
+	function show1(){
+      document.getElementById('input-icons').style.display = 'flex';
+      document.getElementById('payment').style.display = 'none';
+}
+function show2(){
+   document.getElementById('input-icons').style.display = 'none';
+   document.getElementById('payment').style.display = 'block';
+}
+</script>

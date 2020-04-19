@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card-details" style="display: flex;
+justify-content: center;
+flex-direction: row;
+margin: auto;
+width:840px;
+height: auto;
+background-color: #fff;
+margin-top: 30px;
+padding:30px;">
+    
+        {% if product.image %}
+        <img src="{{product.image.url}}" style="height:230px; 
+        width:200px;
+        margin-left: 20px;">
+        {% endif %}
+
+        <div class="column">
+            <a class="desc" href="{% url 'product_detail' product.id %}" style="color: black;">Product: {{product.title}}</p>
+            <hr>
+            <p class="desc">Category: {{product.category}}</p>
+            <hr>
+            <p class="desc"><a href="{% url 'product_detail' product.id %}" style="color: black;">Price: {{product.price}}</a></p>
+            <hr>
+            <span class="desc">Discount: {{product.discountPercent}}%</span>
+            <hr>
+            <p class="desc">Discount price: {{product.discountprice}}</p>
+        </div>
+        <div class="column">
+            <button class="addbtn" style="width: 140px;margin: 60px 0 0 60px;">Add To Card</button>
+            <a href="/editproduct/{{product.id}}"><button class="addbtn" style="width: 140px;margin: 20px 0 20px 60px;background-color: white;color: #F17E0A;">Edit</button></a>
+            <a href="/deleteproduct/{{product.id}}"><button class="addbtn" style="width: 140px;margin-left: 60px;">Delete</button></a>
+        </div>
+ </div>
+   
+ <div class="comments">
+    {% for comment in comments %}
+   <div class="comments-item" >
+   <p>{{comment.author.first_name}} {{comment.author.last_name}}</p>
+   <p>{{comment.text}}</p>
+   <p class="ksho" style="font-size: 12px;">{{comment.created_on}}</p>
+   {% if request.user.is_staff %}
+   <a href="/deletecomment/{{comment.id}}/{{comment.product.id}}" class='nava'><span>-</span></a>
+   {% endif %}   
+</div> 
+    {% endfor %}
+   <div class="row">
+    <form action="" method="post" class="row">
+        {% csrf_token %}
+        {{form.text}}
+        <input type="submit" value="Send" class="addbtn" style="width:140px">
+    </form>
+   </div>
+
+ </div>
+ 
+{% endblock %}

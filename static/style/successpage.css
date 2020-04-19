@@ -1,0 +1,38 @@
+
+/*SUCCESS PAGE*/
+#p{
+	font-size: 18px;
+	font-weight: 400;
+	font-family: -apple-system "Segoe UI";
+	text-align: center;
+	margin: 20px;
+}
+#h3{
+	font-size: 22px;
+	font-weight: 500;
+	font-family: -apple-system "Segoe UI";
+	text-align: center;
+	color: orange;
+	margin: 10px;
+}
+#checkconsole{
+	font-size: 14px;
+	color:#6e6e6e;
+	font-family: -apple-system "Segoe UI";
+	text-align: center;
+	margin: 20px;
+}
+
+.contbtn{
+	color: #FFF;
+    font-size: 13px;
+    background-color: #F17E0A;
+    font-weight: 500;
+    border-color: #F17E0A;
+    line-height: 1.5;
+    border-radius: .2rem;
+    padding: 5px 10px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

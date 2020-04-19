@@ -1,0 +1,53 @@
+
+/*NAV BAR*/
+
+.header_nav{
+	display: flex;
+	justify-content: space-between;
+    padding: 19px;
+    box-shadow: 1px;
+    margin: 0;
+    box-shadow: 0 0 1px 0 grey;
+}
+
+#icontext{
+	color:#E40046;
+	margin:0;
+	font-weight: bold;
+    font-size: 1.25rem;
+    font-family: -apple-system "Segoe UI";
+}
+
+.nava{
+	font-size: 16px;
+	color:#6e6e6e;
+	font-family: -apple-system "Segoe UI";
+	text-decoration: none;
+	padding: 0 6px;
+	font-weight: 300;
+}
+
+.nava:hover{
+	color: #E40046;
+	cursor: pointer;
+}
+.link-active{
+	color: #fff;
+	cursor: pointer;
+	padding: 8px;
+	background-color:  #E40046;
+}
+.nava span{
+	color: white;
+	background-color: #e40046;
+	border-radius: 3px;
+	margin-left: 5px;
+	padding: 1px 5px;
+}
+.link-active span{
+	color: #e40046;
+	background-color:#fff ;
+	border-radius: 3px;
+	margin-left: 5px;
+	padding: 1px 5px;
+}

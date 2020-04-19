@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card-details" style="padding: 20px 0;margin-left: 540px;">
+    <form action="{% url 'login' %}" method="post" class="column">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Log in" class="addbtn" style="width:160px;margin-top: 20px;">
+    </form>
+</div>
+
+{% endblock %}
